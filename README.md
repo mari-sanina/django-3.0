@@ -1,1 +1,5 @@
-"# django-3.0" 
+# First django project
+
+## Install
+
+## Run
