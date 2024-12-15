@@ -114,3 +114,31 @@ p.title{
     padding: 30px;
     border: 2px solid black;
 }
+
+form{
+    width: 740px;
+    height: 498px;
+}
+
+input[type=text]{
+    width: 200px;
+    font-family: "Inter", sans-serif;
+    padding: 5px 5px;
+}
+
+input[type=email]{
+    width: 200px;
+    font-family: "Inter", sans-serif;
+    padding: 5px 5px;
+}
+
+input[type=text]{
+    font-family: "Inter", sans-serif;
+    border: 1px line #bbbbbb;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 0;
+    height: 120px;
+    width: 340px;
+    background: none;
+  }

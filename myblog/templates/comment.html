@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<h3>{{ title }}</h3>
+<h2>{{ title }}</h2>
 
 <form action="{% url 'tnx_page' %}" method="POST">
     {% csrf_token %}
@@ -12,12 +12,21 @@
             <option value="{{p.id}}">{{ p.name }}</option>
         {% endfor %}
     </select>
-    <label for="user_name"></label>
-    <input name="user_name" id="user_name">
-    <label for="email"></label>
-    <input name="email" id="email">
-    <label for="comment"></label>
-    <input name="comment" id="comment">
-    <button type="submit">Отправить</button>
+    <div class="form-input">
+      <h3>Ваше ФИО</h3>
+        <label for="user_name"></label>
+        <input type="text" name="user_name"  placeholder="Иннокентий" id="user_name">
+      <h3>E-mail:</h3>
+        <label for="email"></label>
+        <input type="email" name="email" placeholder="intro@mail.ru" id="email">
+      <h3>Комментарий:</h3>
+        <label for="comment"></label>
+        <input type="text" name="comment" id="comment">
+    </div>
+    <div class="button">
+      <input type="submit" value="Отправить" style=" margin-top: 40px; margin-right: 20px; margin-bottom: 10%; width: 200px; height: 40px; background-color: #444444; color: whitesmoke; font-size: 14pt;">
+      <input type="reset" value="Сбросить" style="width: 200px; height: 40px; background-color: #f2f2f2; color: #444444; font-size: 14pt;">
+    </div>
 </form>
+
 {% endblock %}
