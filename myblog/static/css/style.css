@@ -63,8 +63,8 @@ img{
     margin: 0 auto;
     padding: 10px 10px;
     display: block;
-    height: 40px;
-    width: 180px;
+    height: 60px;
+    width: 200px;
     font-size: 16pt;
     color: white;
     text-align: center;
@@ -144,7 +144,7 @@ input[type=email]{
     padding: 5px 5px;
 }
 
-input[type=text]{
+textarea{
     font-family: "Inter", sans-serif;
     border: 1px line #bbbbbb;
     border-radius: 5px;
@@ -153,4 +153,10 @@ input[type=text]{
     height: 120px;
     width: 340px;
     background: none;
+  }
+
+  option{
+    width: 400px;
+    font-family: "Inter", sans-serif;
+    padding: 5px 5px;
   }
