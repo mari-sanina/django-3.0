@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class='main'>
-        <img src="img/my_img.jpg" alt="Фотография красивого заката" width="500" height="300">
+        <img src="{% static 'main.png' %}">
         <div class="button"><a href="catalog/">узнать тайны</a></div>
 </div>
 <div class="textcols">
