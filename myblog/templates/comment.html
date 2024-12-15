@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>{{ title }}</h3>
+
+<form action="{% url 'tnx_page' %}" >
+    {% csrf_token %}
+    <label for="user_name"></label>
+    <input name="user_name" id="user_name">
+    <label for="email"></label>
+    <input name="email" id="email">
+    <label for="comment"></label>
+    <input name="comment" id="comment">
+    <button type="submit">Отправить</button>
+</form>
+{% endblock %}
