@@ -7,3 +7,13 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+
+class PostComment(models.Model):
+    user_name = models.CharField(max_length=20, blank=False)
+    email = models.CharField(max_length=100)
+    comment = models.CharField(max_length=1000)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'{self.name}'

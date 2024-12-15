@@ -5,8 +5,13 @@
 
 <h3>{{ title }}</h3>
 
-<form action="{% url 'tnx_page' %}" >
+<form action="{% url 'tnx_page' %}" method="POST">
     {% csrf_token %}
+    <select name="post">
+        {% for p in posts %}
+            <option value="{{p.id}}">{{ p.name }}</option>
+        {% endfor %}
+    </select>
     <label for="user_name"></label>
     <input name="user_name" id="user_name">
     <label for="email"></label>
