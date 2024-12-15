@@ -59,6 +59,18 @@ img{
     border: 3px solid black;
     cursor: pointer;
 }
+.but-comment{
+    margin: 0 auto;
+    padding: 10px 10px;
+    display: block;
+    height: 40px;
+    width: 180px;
+    font-size: 16pt;
+    color: white;
+    text-align: center;
+    border: 3px solid black;
+    cursor: pointer;
+}
 
 h1{
     font-size: 56pt;
