@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .view import hello_page
+from .view import *
 
 urlpatterns = [
-    path('', hello_page),
+    path('', main_page),
+    path('about/', about_page),
+    path('catalog/', catalog_page),
+    path('post/<int:id>/<str:category>/', post_page),
 ]
