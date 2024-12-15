@@ -22,11 +22,7 @@ ul.hr li {
 
 a{
     text-decoration: none;
-}
-
-div{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    color: black;
 }
 
 .main{
@@ -35,14 +31,33 @@ div{
     margin-right: auto;
 }
 
-button{
-    margin: 0 auto;
+.main_img{
     display: block;
-    height: 68px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+
+.but{
+    margin: 0 auto;
+    padding: 10px 10px;
+    display: block;
     width: 180px;
     font-size: 16pt;
     color: white;
-    border: 2px solid black;
+    text-align: center;
+    border: 3px solid black;
+    cursor: pointer;
 }
 
 h1{
@@ -71,6 +86,8 @@ p.title{
 
 .textcols {
 	white-space: nowrap;
+	margin-top: 5%;
+    margin-bottom: 5%;
 }
 .textcols-item {
 	white-space: normal;
@@ -80,4 +97,20 @@ p.title{
 }
 .textcols .textcols-item:first-child {
 	margin-right: 4%;
+}
+
+
+
+.grid-card{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.card{
+    padding: 30px;
+    border: 2px solid black;
 }

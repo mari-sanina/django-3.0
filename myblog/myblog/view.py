@@ -12,7 +12,5 @@ def about_page(request):
     return render(request,"./about.html", context=data)
 
 def post_page(request):
-    resp = f'Post id: {id}, category: {category}'
-    menu = {"о блоге": "/about", "conspirology.": "/", "каталог": "/catalog"}
-    data = {"menu": menu}
+    data = {"menu": MENU}
     return render(request,"./post.html", context=data)

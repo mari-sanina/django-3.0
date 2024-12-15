@@ -22,6 +22,6 @@ urlpatterns = [
     path('', main_page),
     path('about/', about_page),
     path('catalog/', include('catalog.urls')),
-    path('post/<int:id>/<str:category>/', post_page),
+    path('post/', post_page),
     path('admin', admin.site.urls),
 ]
