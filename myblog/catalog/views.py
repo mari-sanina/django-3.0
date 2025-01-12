@@ -6,7 +6,8 @@ MENU = {"о блоге": "/about", "conspirology.": "/", "каталог": "/cat
 
 def catalog_page(request):
     posts = Post.objects.all()
-    data = {"menu": MENU, "posts": posts}
+    checked_comments = PostComment.objects.filter(is_checked=True)
+    data = {"menu": MENU, "posts": posts, "comments": checked_comments}
     return render(request,"./catalog.html", context=data)
 
 def comment_page(request):
@@ -16,12 +17,10 @@ def comment_page(request):
     return render(request,"./comment.html", context=data)
 
 def comments(request):
-    posts = PostComment.objects.all()
-    new = Post.objects.values('id','title')
-    title = "Комментарии"
-    data = {"title": title, "menu": MENU, "posts": posts, 'new':new}
-    return render(request, "./comments.html", context=data)
-
+    title = "Проверенные Комментарии"
+    checked_comments = PostComment.objects.filter(is_checked=True)
+    data = {"title": title, "menu": MENU, 'comments': checked_comments}
+    return render(request, "./comments.html", data)
 
 def tnx_page(request):
     user_name = request.POST["user_name"]

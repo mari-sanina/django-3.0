@@ -14,4 +14,20 @@
 {% endfor %}
     <div class="but-comment"><a href="comment/">оставить комментарий</a></div>
 </div>
+
+<h2>Проверенные комментарии</h2>
+
+    {% if comments %}
+        <ul>
+            {% for comment in comments %}
+                <li>
+                    <strong>{{ comment.user_name }} ({{ comment.email }}):</strong>
+                    <p>{{ comment.comment }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет проверенных комментариев.</p>
+    {% endif %}
+
 {% endblock %}
