@@ -12,7 +12,7 @@ def catalog_page(request):
 
 def comment_page(request):
     posts = Post.objects.values("id", "name")
-    title = "Добавить комментарий"
+    title = "Оставить комментарий"
     data = {"title": title, "menu": MENU, "posts": posts}
     return render(request,"./comment.html", context=data)
 
