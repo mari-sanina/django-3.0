@@ -15,6 +15,14 @@ def comment_page(request):
     data = {"title": title, "menu": MENU, "posts": posts}
     return render(request,"./comment.html", context=data)
 
+def comments(request):
+    posts = PostComment.objects.all()
+    new = Post.objects.values('id','title')
+    title = "Комментарии"
+    data = {"title": title, "menu": MENU, "posts": posts, 'new':new}
+    return render(request, "./comments.html", context=data)
+
+
 def tnx_page(request):
     user_name = request.POST["user_name"]
     email = request.POST["email"]

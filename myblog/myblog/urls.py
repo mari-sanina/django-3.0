@@ -23,5 +23,5 @@ urlpatterns = [
     path('about/', about_page),
     path('catalog/', include('catalog.urls')),
     path('post/', post_page),
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
